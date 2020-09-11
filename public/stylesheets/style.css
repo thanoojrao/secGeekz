@@ -1,0 +1,163 @@
+
+@import url('../stylesheets/fonts.css');
+/* sass styling template*/
+/*global classes*/
+html,body{
+  margin:0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+}
+input{
+  border: none;
+  background: inherit;
+  border-bottom: 2px solid;
+  border-color: gray;
+}
+input:focus{
+  outline:none;
+  box-shadow: 0px 3px 5px 0.5px gray;
+}
+button, button:focus {
+  
+  outline-color:rgba(0,165, 196, 1);
+  outline-width: 4px;
+  background-color: rgba(0,165, 196, 0.5);
+  border: none;
+}
+button:hover{
+  box-shadow:0px 0px 10px 5px skyblue ;
+}
+.align-center{
+  text-align: center;
+}
+.font-weight-bold{
+  font-weight: bold;
+}
+.color-primary {
+  color: #003859;
+}
+.color-second {
+  color: #00A5C4;
+}
+
+/*typography classes*/
+.font-abel {
+  font-family: "Abel", cursive;
+}
+
+.font-anton {
+  font-family: "Anton", cursive;
+}
+
+.font-livvic {
+  font-family: "Livvic", cursive;
+}
+.font-yesteryear{
+  font-family: "yesteryear",cursive;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+.font-size-36 {
+  font-size: 36px;
+}
+/*custom*/
+.signup{
+  font-size: 24px;
+  text-shadow: 3px 15px 4px #003859;
+}
+.spaced{
+  letter-spacing: 1px;
+}
+.top-line{
+  background: rgba(0,165, 196, 1);
+  width: 400px;
+  margin: auto;
+  margin-bottom: 0px;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  font-weight: bold;
+  
+}
+.login-heading{
+  padding-top: 4px;
+  padding-bottom: 12px;
+  width: 300px;
+  margin: auto;
+  opacity: 1;
+  
+}
+.login-headings{
+  width: 400px;
+  position: relative;
+  margin: auto;
+  background: rgba(0, 56, 89, 0.1);
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+.topbar{
+  width: 100vw;
+  background: #00A5C4;
+}
+.welcome{
+  text-align: center;
+}
+.fa{
+  cursor: pointer;
+  color: #999;
+
+}
+.fa.active{
+  color:dodgerblue;
+}
+/*custom signup*/
+#message {
+  display:none;
+  font-weight: bold;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+ display: none;
+}
+
+
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+  display: block;
+}
+
+.invalid:before {
+  position: relative;
+  
+}
+
+@media(maxwidth: 600px){
+  .signup ,.topbar{
+    width: 100vw;
+  }
+    .top-line{
+      width: 100vw;
+}
+}

@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div.top-line
+   p.font-Anton.signup.align-center.spaced Login
+   div.font-abel.font-size-16.font-weight-bold.spaced
+    a.px-3.border-right.border-left.text-dark(href="/signup")  Signup
+  form(action="/login", method="POST")
+   div.login-headings
+    div.login-heading.font-anton.spaced.font-size-14.color-second 
+     label(for="email") email:     
+     input.font-livvic.font-weight-bold(name="user_email",type="text",placeholder="  joe@domain.com")
+    div.login-heading.font-anton.font-size-14.spaced.color-second  
+     label(for="password") Password :     
+     input#psw.font-livvic.font-weight-bold(name="user_password",type="password",placeholder="********")
+     i.fa.fa-eye#eye(onclick="toogle()")
+    if user_exists==false
+     p.font-size-14.font-livvic.alert-danger.py-0.rounded-pill.align-center  This mail is not registered with us. Please signup
+    if check_psw==false
+     p.font-size-14.font-livvic.alert-danger.py-0.rounded-pill.align-center  Incorrect mail or password.
+    div.login-heading.font-anton.font-size-14.spaced.color-second 
+     button#signup(type="submit") Submit
+  script(src="../javascripts/login.js")

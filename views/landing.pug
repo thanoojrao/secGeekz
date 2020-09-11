@@ -1,0 +1,46 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='le=edge')
+  title SecGeekz
+  // custom stylesheet
+  link(rel='stylesheet' href='../stylesheets/landing.css')
+  // link for fontawesome stylesheet
+  script(src="https://use.fontawesome.com/0050a00bc6.js")
+// ------------- navigation---------------
+nav.nav
+  .nav-menu.flex-row
+    .nav-brand
+      a.text-gray(href='#') Welcome #{user_name}
+    .toggle-collapse
+      .toggle-icons
+        i.fa.fa-bars
+    div
+      ul.nav-items
+        li.nav-link
+          a(href='#') Home
+        li.nav-link
+          a(href='#') Category
+        li.nav-link
+          a(href='#') Pages
+        li.nav-link
+          a(href='#') Contact us
+    .social.text-gray
+      a(href='#')
+        i.fa.fa-facebook
+      a(href='#')
+        i.fa.fa-instagram
+      a(href='#')
+        i.fa.fa-twitter
+      a(href='#')
+        i.fa.fa-youtube 
+      a(href='/')  
+        u signout  
+// ------------- navigation---------------
+// jquery javascript file------
+
+script(src='./javascripts/jquery.3.5.1.js')
+
+// main javascript file
+script(src='../javascripts/landing.js')

@@ -1,0 +1,35 @@
+extends layout
+
+block content
+ div.top-line
+  p.font-Anton.signup.align-center.spaced SignUp
+ form(action="/signup", method="POST")
+   div.login-headings
+    div.login-heading.font-anton.font-size-14.spaced.color-second
+     label(for="email") email :     
+     input.font-livvic.font-weight-bold#userEmail(name="user_email", type="email",placeholder="email")
+    div.login-heading.font-anton.spaced.font-size-14.color-second 
+     label(for="user name") User Name :     
+     input.font-livvic.font-weight-bold#userName(name="user_name",type="text",placeholder="Name")
+    div.login-heading.font-anton.font-size-14.spaced.color-second  
+     label(for="password") Password :     
+     input#psw.font-livvic.font-weight-bold(name="user_password",type="password",placeholder="********")
+     i.fa.fa-eye#eye(onclick="toogle()")
+    div.login-heading.font-anton.font-size-14.spaced.color-second 
+     label(for="password") Confirm Password: 
+     input.font-livvic.font-weight-bold#conform_psw(name="user_con_pass",type="password",placeholder="********")
+    if user_exists==true
+        p.font-size-14.font-livvic.alert-danger.py-0.rounded-pill.align-center account already exists with this email
+    div#message.font-livvic.font-size-14.color-primary
+     p#email_error.invalid  please enter a valid mail address
+     p#name_length.invalid User name cannot be empty.
+     p.fontsize-16 Password must contain the following:
+     p#letter.invalid A lower case letter.
+     p#capital.invalid A capital letter.
+     p#number.invalid  A number.
+     p#length.invalid  Minimum 8 characters.
+     p#match_psw.invalid passwords does not match.
+    div.login-heading.font-anton.font-size-14.spaced.color-second 
+     button(disabled="disabled")#signup_btn(type="submit") Submit
+ script(src="../javascripts/index.js")    
+ script(src="../javascripts/login.js")

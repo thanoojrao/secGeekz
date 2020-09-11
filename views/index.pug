@@ -1,0 +1,9 @@
+extends layout
+
+block content
+
+  div.strip.d-flex.px-4.py-2.justify-content-between.topbar
+     p.font-anton.spaced.font-size-20.text-black-50.m-0.font-weight-bold  WELCOME #{user_name}
+     div.font-abel.font-size-16.font-weight-bold.spaced
+      a.px-3.border-right.border-left.text-dark(href="./login") Login
+      a.px-3.border-right.text-dark(href="./signup")  Signup
